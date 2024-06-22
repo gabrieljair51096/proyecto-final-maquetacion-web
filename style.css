@@ -21,14 +21,19 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px 3%;
-    background-color: transparent;
+    background:linear-gradient(245.59deg, #000000 0%, #0d2054 33% , #ffff 70%);
+    border-bottom: whitesmoke solid 1px;
  }
  .logo {
-    margin-left: 80px;
-    font-size: 35px;
-    font-weight: 800; /* grosor de letra*/
+    border: #0d2054 solid 1.5px;
+    border-radius: 5px;
+    background-color:#05194e transparent;
+    padding: 10px;
+    
+    font-size: 25px;
+    font-weight: 600; /* grosor de letra*/
     color: #0d2054;
  }
 
@@ -42,6 +47,7 @@ header{
     font-weight: 600;
     border-bottom: 2px solid transparent;
     transition: all .5s ease;
+    
  }
   .navlist a:hover {
     border-bottom: 2px solid white;
@@ -61,14 +67,14 @@ header{
     display: none;
  }
  .menu-icon-action {
-    display: block;
+    display: none;
  }
 
 .hero {
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #000000 0%, #0d2054 25% , #c86f21 45%, #ffff 85%); /*fonde de color gradiente */
+    background: linear-gradient(245.59deg, #000000 0%, #0d2054 25% ,white 25.03%,white 25.08%, #c86f21 25.13%, #ffff 85%); /*fonde de color gradiente */
     position: relative; /* Para que sea relativo al contenedor (no permite usar top, b, l y r )*/
     display: grid; /* Para que el hero se dividir en dos colunas*/
     grid-template-columns: 1fr 1fr; /* las 2 columnas */
@@ -112,12 +118,15 @@ section {
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: all 5s linear;
+    transition: all 2s linear;
 }
 
 .hero-img img:hover {
-    width: 450px;
-    opacity: 0.6;
+   
+    width: 420px;
+    opacity: 0.9;
+    box-shadow: 1px 3px 2px white;
+    transition: all .5s linear;
 
 }
 
@@ -215,14 +224,18 @@ section {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+    header{
+        background:linear-gradient(250deg, #000000 1%, #0d2054 15% ,#ffff 15.03%,#ffff 15.08%, #ffff 15.15%);
+    }
     #menu-icon {
-        color: #0d2054;
+        color: white;
+        display: block;
     }
     .hero {
-        background: linear-gradient(245.59deg, #ffff 10%,  #c86f21 65% , #0d2054 85%, #000000 95%);
+        background: linear-gradient(-250.39deg,#ffff,#c86f21 75%,#ffff 75.03%,#ffff 75.08%, #0d2054 75.15%, black);
     }
-    }
+    
     .menu-icon-action {
         display: block;
     }
@@ -262,9 +275,10 @@ section {
         margin: 7px 0;
     }
 
-    #menu-toggle:checked + label.menu-icon-action + ul {
+    .navlist.open{
         right: 0;
-
     }
+
+}
 
 
